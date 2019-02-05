@@ -12,3 +12,9 @@ go/global/general versioning system
 * Allow commands to affect multiple repositories simultaneously
 * Count lines of source code
 * List TODOs
+
+
+what is different from GIT:
+
+* integrated SSL server
+* integrated RBAC
