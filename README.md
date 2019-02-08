@@ -19,6 +19,7 @@ go/global/general versioning system
 * Allow commands to affect multiple repositories simultaneously
 * Count lines of source code
 * List TODOs
+* Contributor branch
 
 
 what is different from GIT:
