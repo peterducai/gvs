@@ -5,7 +5,7 @@ go/global/general versioning system
 
 * Dead simple & single binary with tons of features
 * AutoSync - Reduces needless Merging and Forking
-* Tickets/issues integrated into versioning system tree
+* integrated wiki, ticketing & bug tracking, embedded documentation, and Technical notes. 
 
 ## Other
 
