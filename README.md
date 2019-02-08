@@ -5,7 +5,9 @@ go/global/general versioning system
 
 * Dead simple & single binary with tons of features
 * AutoSync - Reduces needless Merging and Forking
+* Tickets/issues integrated into versioning system tree
 
+## Other
 
 * Manage commit access to parts of a repo using control lists
 * Edit, fold, drop changesets in the style of git rebase --interactive
