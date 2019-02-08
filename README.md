@@ -16,5 +16,6 @@ go/global/general versioning system
 
 what is different from GIT:
 
-* integrated SSL server
+* integrated SSL server.. should be as easy as 
+> python -m SimpleHTTPServer
 * integrated RBAC
