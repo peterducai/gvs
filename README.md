@@ -6,6 +6,7 @@ go/global/general versioning system
 * Dead simple & single binary with tons of features
 * AutoSync - Reduces needless Merging and Forking
 * integrated wiki, ticketing & bug tracking, embedded documentation, and Technical notes. 
+* easily manage users and access to your repos
 
 ## Other
 
