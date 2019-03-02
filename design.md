@@ -1,10 +1,25 @@
 # Design
 
+## Outcome
+
+* Stand-alone executable.. but modular code base!
+* only PUSH/PULL.. no clone/checkout/fork.. these are just buzzwords for same thing.
+* every change is per file and it's called PATCH
+* commit can be one or several PATCHes.. if several, it's called PATCHLIST
+* only SNAPSHOTS.. every commit, branch or fork is actually snapshot.
+* every SNAPSHOT contains TIMESTAMP, USER, HOST, PATCHLIST
+* you can pull specific PATCH from specific SNAPSHOT
+* after mergin SNAPSHOT, don't delete/detach info about it.
+* *gvs push all* will push to all servers (external repos)
+* Cathedral vs. Bazaar... why not both?
+
+
 ## Ideas
 
 * BRANCH is actually just SNAPSHOT in time
 * commit info should contain TIMESTAMP, USER, diff HASH
 * needs better model than SemVer (tracking functions? addition and deletions)
+* no more.. error: You have local changes to 'frotz'; not switching branches.
 
 ## Ideas from others
 
@@ -23,3 +38,8 @@ Interactivity. Darcs enables you to be precise and say “yes” or “no” to 
 Alternately, the merge conflicts can be saved to a file, and resolved asynchronously, then used to perform the merge.
 
 It is important to note that a 3-way merge is not the same as simply "applying patches" in one order or another: we locate the least common ancestor of the merged children in our ancestry graph, calculate the edits on the left and right edges, adjust the right edge's edit coordinates based on the left edge's edits, and only then do we concatenate the left and right edges (ignoring identical changes, and rejecting conflicting ones).
+
+
+* Fossil and Git promote different development styles. Git promotes a "bazaar" development style in which numerous anonymous developers make small and sometimes haphazard contributions. Fossil promotes a "cathedral" development model in which the project is closely supervised by an highly engaged architect and implemented by a clique of developers.
+* One commentator has mused that Git records history according to the victors, whereas Fossil records history as it actually happened.
+* The fossil push, fossil pull, and fossil sync commands do not provide the capability to push or pull individual branches. Pushing and pulling in Fossil is all or nothing. This is in keeping with Fossil's emphasis on maintaining a complete record and on sharing everything between all developers.
