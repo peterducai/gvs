@@ -2,7 +2,7 @@
 
 go/global/general versioning system
 
-
+* ask user details if missing (no more git config or bazaar whoami)
 * Dead simple & single binary with tons of features
 * AutoSync - Reduces needless Merging and Forking
 * integrated wiki, ticketing & bug tracking, embedded documentation, and Technical notes. 
@@ -28,3 +28,14 @@ what is different from GIT:
 * integrated SSL server.. should be as easy as 
 > python -m SimpleHTTPServer
 * integrated RBAC
+* send the patches by email (darcs send)
+
+## Issues with other vcs
+
+* Poor handling of binary data
+* Submodules are very difficult to work with effectively, and are limited to including an entire
+* Steep learning curve
+* no diffs on binary files
+* The repository is a bunch of files that can easily be ruined by some accident.
+* Inconsistent command line interface
+* Revert features with ease 
