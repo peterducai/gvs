@@ -2,6 +2,20 @@
 
 go/global/general versioning system
 
+## Main features
+
+* dead simple & single binary
+* single binary
+* auto-setup and auto-healing 
+  > ask user details if missing (no more git config or bazaar whoami)
+
+  > warn about damaged data (SHA-3 hashing)
+* strict RBAC (requires all access through roles, and permissions are connected only to roles, not directly to users.)
+* repository pointers aka nested repositories
+* integrated tickets and wiki/docs
+
+## Other
+
 * ask user details if missing (no more git config or bazaar whoami)
 * Dead simple & single binary with tons of features
 * AutoSync - Reduces needless Merging and Forking
