@@ -7,7 +7,9 @@
 * every change is per file and it's called PATCH
 * commit can be one or several PATCHes.. if several, it's called PATCHLIST
 * only SNAPSHOTS.. every commit, branch or fork is actually snapshot.
-* every SNAPSHOT contains TIMESTAMP, USER, HOST, PATCHLIST
+* PERMPATCH is patch containing changes in file permissions
+* every SNAPSHOT contains TIMESTAMP, USER, HOST, PATCHLIST and PERMPATCH
+* DEDUPLICATION! to minimize size of repo.
 * you can pull specific PATCH from specific SNAPSHOT
 * after mergin SNAPSHOT, don't delete/detach info about it.
 * *gvs push all* will push to all servers (external repos)
