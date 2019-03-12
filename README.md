@@ -8,7 +8,7 @@ go/global/general versioning system
 * **auto-setup** and **auto-healing**
   > ask user details if missing (no more git config or bazaar whoami)
 
-  > warn about damaged data (SHA-3 hashing)
+  > warn about damaged data (SHA-3 hashing), missing files or wrong permissions
 * **strict RBAC** (requires all access through roles, and permissions are connected only to roles, not directly to users.)
 * **repository pointers** aka nested repositories
 * integrated **tickets** and **wiki/docs**
