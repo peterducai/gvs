@@ -14,6 +14,8 @@
 * after mergin SNAPSHOT, don't delete/detach info about it.
 * *gvs push all* will push to all servers (external repos)
 
+* ANONYMOUS merge requests
+
 # Cathedral vs bazaar
 
 The Cathedral model, in which source code is available with each software release, but code developed between releases is restricted to an exclusive group of software developers. GNU Emacs and GCC were presented as examples.
