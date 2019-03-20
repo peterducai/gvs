@@ -1,4 +1,6 @@
 # gvs
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpeterducai%2Fgvs.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpeterducai%2Fgvs?ref=badge_shield)
+
 
 go/global/general versioning system
 
@@ -60,3 +62,6 @@ what is different from GIT:
 * Revert features with ease 
 
 -->
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fpeterducai%2Fgvs.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fpeterducai%2Fgvs?ref=badge_large)
