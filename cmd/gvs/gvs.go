@@ -27,4 +27,7 @@ func getFilePerm(fpath string) {
 
 func main() {
 	fmt.Println("gvs")
+	// config := new(GVSconfig)
+	// user1 := new(User)
+	// config.Users = append(config.Users[User], user1)
 }

@@ -1,24 +1,54 @@
 package main
 
-import "os"
+import (
+	"encoding/json"
+	"fmt"
+	"os"
+)
 
-//Config
+//SSHkey defines ssh key and it's extra properties
 type SSHkey struct {
-	SSHkey string `json:"ssh"`
+	KeyName string `json:"keyname"`
+	SSHkey  string `json:"ssh"`
+	Public  bool   `json:"public"`
 }
-type GVSconfig struct {
-	User   string	`json:"user"`
-	Email  string	`json:"email"`
+
+//User defined by name, email and set of ssh keys
+type User struct {
+	User    string `json:"user"`
+	Email   string `json:"email"`
 	SSHkeys []SSHkey
 }
 
+//GVSconfig represents whole config file
+type GVSconfig struct {
+	Users []User
+}
+
 //ReadConfig reads gvs.config
-func ReadConfig(){
+func ReadConfig() {
 
 }
 
-func CreateConfig(){
+//CreateConfig dump values to config file
+func CreateConfig(conf GVSconfig) {
+	b, err := json.Marshal(conf)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(b))
+}
 
+//CreateDefaultConfig dump values to config file
+func CreateDefaultConfig() {
+	config := new(GVSconfig)
+	b, err := json.Marshal(config)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(string(b))
 }
 
 // fileExists checks if a file exists and is not a directory before we
