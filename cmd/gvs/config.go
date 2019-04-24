@@ -56,7 +56,34 @@ func CreateDefaultConfig() {
 func fileExists(filename string) bool {
 	info, err := os.Stat(filename)
 	if os.IsNotExist(err) {
+		fmt.Println("File doesn't exist")
 		return false
 	}
 	return !info.IsDir()
+}
+
+//ConfigHealthCheck checks for healthy config file
+func ConfigHealthCheck() {
+	fmt.Println("running CONFIG checks")
+	fileExists("~/.gvsconfig.json")
+}
+
+//getFilePerm will get file permissions
+func getFilePerm(fpath string) {
+
+	fileInfo, err := os.Stat(fpath)
+
+	// check if there is an error
+	if err != nil {
+
+		// check if error is file does not exist
+		if os.IsNotExist(err) {
+			fmt.Println("File does not exist.")
+		}
+
+	}
+
+	mode := fileInfo.Mode()
+
+	fmt.Println(fileInfo, "mode is ", mode)
 }
