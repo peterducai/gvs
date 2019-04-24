@@ -18,6 +18,15 @@ go/global/general versioning system
 * **tracking of directories**
 * **tracking of folder and file permissions**
 
+
+```shell
+gvs #will init gvs
+gvs name "initial save"
+#change some files
+gvs name "my temp save $(date)"
+gvs stat
+```
+
 <!--
 ## Other
 
