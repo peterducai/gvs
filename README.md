@@ -17,6 +17,10 @@ go/global/general versioning system
 * tracking of **large binary data**
 * **tracking of directories**
 * **tracking of folder and file permissions**
+* automatic metrics (TODOs, line count, etc..)
+* write or hide on commit, do not delete!
+* Archive and send a collection of changesets as a series of patch by emails
+* plugin system - write your own plugin to track functions in your language
 
 
 ```shell
@@ -25,6 +29,8 @@ gvs name "initial save"
 #change some files
 gvs name "my temp save $(date)"
 gvs stat
+gvs archive "my-last-fix_dev_0.3"
+gvs send user@mail.com
 ```
 
 <!--
