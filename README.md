@@ -20,7 +20,21 @@ go/global/general versioning system
 * automatic metrics (TODOs, line count, etc..)
 * write or hide on commit, do not delete!
 * Archive and send a collection of changesets as a series of patch by emails
-* plugin system - write your own plugin to track functions (or anything you specify) in your language
+* track functions and their changes. 
+<!-- use/investigate https://github.com/Microsoft/language-server-protocol to specify languages
+or https://github.com/AnanthaRajuCprojects/Reserved-Key-Words-list-of-various-programming-languages 
+
+
+PYTHON: 
+  def STRING( STRING? ):
+    STRING
+    return
+C:
+  STRING STRING( STRING? ) { STRING }
+GO:
+  func STRING( STRING? ) STRING? { STRING }
+JAVA:
+  STRING(?) STRING( STRING? ) {  -->
 
 
 ```shell
