@@ -20,7 +20,7 @@ go/global/general versioning system
 * automatic metrics (TODOs, line count, etc..)
 * write or hide on commit, do not delete!
 * Archive and send a collection of changesets as a series of patch by emails
-* plugin system - write your own plugin to track functions in your language
+* plugin system - write your own plugin to track functions (or anything you specify) in your language
 
 
 ```shell
