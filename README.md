@@ -37,15 +37,81 @@ JAVA:
   STRING(?) STRING( STRING? ) {  -->
 
 
+## Examples
+
+### Simple workflow (single person)
+
 ```shell
 gvs #will init gvs
 gvs name "initial save"
 #change some files
 gvs name "my temp save $(date)"
-gvs stat
+gvs stat/log/history
 gvs archive "my-last-fix_dev_0.3"
-gvs send user@mail.com
+gvs push
+# will push to master
 ```
+
+### Multi workflow (several persons)
+
+*developer1*
+
+```shell
+gvs clone <url>
+#change some files
+gvs name "my save"
+gvs branch "br1"
+gvs push
+```
+
+*developer2*
+
+```shell
+gvs clone <url>
+#change some files
+gvs name "my save"
+gvs branch "br2"
+gvs push
+```
+<!-- 
+*merging lines*
+
+```shell
+gvs branch list
+# br1
+# br2
+# br3-playground
+gvs branch compare br1 br2
+# br1.1 (file1)
+#   changed_lines: 1,5, 22-55, 75
+# br2.1 (file1)
+#   changed_lines: 4,5, 22-55, 75
+#
+# br1.2 (file2)
+#   changed_lines: 15, 25-55, 99
+gvs branch from br1 br2 
+gvs branch "merged br1 br2"
+gvs pick br1.1
+
+```
+
+*merging functions*
+
+```shell
+gvs branch list
+# br1
+# br2
+gvs branch compare br1 br2
+# br1.1
+#   -
+#
+#
+# br2.1
+#
+# br2.2
+#
+
+``` -->
 
 <!--
 ## Other
