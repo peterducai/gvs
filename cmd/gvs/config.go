@@ -1,29 +1,10 @@
-package main
+package gvs
 
 import (
 	"encoding/json"
 	"fmt"
 	"os"
 )
-
-//SSHkey defines ssh key and it's extra properties
-type SSHkey struct {
-	KeyName string `json:"keyname"`
-	SSHkey  string `json:"ssh"`
-	Public  bool   `json:"public"`
-}
-
-//User defined by name, email and set of ssh keys
-type User struct {
-	User    string `json:"user"`
-	Email   string `json:"email"`
-	SSHkeys []SSHkey
-}
-
-//GVSconfig represents whole config file
-type GVSconfig struct {
-	Users []User
-}
 
 //ReadConfig reads gvs.config
 func ReadConfig() {

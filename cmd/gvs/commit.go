@@ -1,39 +1,24 @@
-package main
+package gvs
 
 import (
 	"encoding/json"
 	"fmt"
-	"os"
 )
-
-//SSHkey defines ssh key and it's extra properties
-type SSHkey struct {
-	KeyName string `json:"keyname"`
-	SSHkey  string `json:"ssh"`
-	Public  bool   `json:"public"`
-}
 
 //Ref defines ssh key and it's extra properties
 type Ref struct {
-	ID string `json:"id"`
+	ID    string `json:"id"`
 	Link  string `json:"link"`
-	Other  bool   `json:"other"`
-}
-
-//User defined by name, email and set of ssh keys
-type User struct {
-	User    string `json:"user"`
-	Email   string `json:"email"`
-	SSHkeys []SSHkey
+	Other bool   `json:"other"`
 }
 
 //Commit represents whole config file
 type Commit struct {
-	name string `json:"name"`
+	name        string `json:"name"`
 	description string `json:"description"`
-	Date string `json:"date"`
-	Author User
-	Reference []Ref
+	Date        string `json:"date"`
+	Author      User
+	Reference   []Ref
 }
 
 //CreateCommitJSON dump values to config file
