@@ -20,7 +20,8 @@ go/global/general versioning system
 * automatic metrics (TODOs, line count, etc..)
 * write or hide on commit, do not delete!
 * Archive and send a collection of changesets as a series of patch by emails
-* track functions and their changes. 
+* diff lines OR functions. 
+* data diffing for YAML, JSON, INI
 <!-- use/investigate https://github.com/Microsoft/language-server-protocol to specify languages
 or https://github.com/AnanthaRajuCprojects/Reserved-Key-Words-list-of-various-programming-languages 
 

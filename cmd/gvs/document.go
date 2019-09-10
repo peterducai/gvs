@@ -5,11 +5,11 @@ import (
 	"fmt"
 )
 
-type Document int
+type DocumentType int
 
 const (
-	GenericDoc Document = iota
-	Tncident
+	GenericDoc DocumentType = iota
+	Incident
 	Change
 	Problem
 	Bug
@@ -20,14 +20,14 @@ const (
 	Blog
 )
 
-func (d Direction) String() string {
-	return [...]string{"North", "East", "South", "West"}[d]
+func (dt DocumentType) String() string {
+	return [...]string{"GenericDoc", "Incident", "Change", "Problem"}[dt]
 }
 
 //xSSHkey defines ssh key and it's extra properties
-type xSSHkey struct {
-	KeyName string `json:"keyname"`
-	SSHkey  string `json:"ssh"`
+type Document struct {
+	Id string `json:"id"`
+	Path  string `json:"path"`
 	Public  bool   `json:"public"`
 }
 
