@@ -27,3 +27,7 @@ type Role struct {
 type GVSconfig struct {
 	Roles []Role
 }
+
+func createRole() {
+
+}
