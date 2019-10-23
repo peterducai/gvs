@@ -2,6 +2,10 @@
 
 go/global/general versioning system
 
+# install 
+
+> go get github.com/peterducai/gvs
+
 ## Main features
 
 * dead simple & single binary
