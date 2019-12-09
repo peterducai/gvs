@@ -1,5 +1,8 @@
 # Design
 
+
+* Pull/Push streams. Specify where to pull from (several servers) or to push to (lock specified packages)
+
 ## Outcome
 
 * Stand-alone executable.. but modular code base!
