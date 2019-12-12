@@ -6,6 +6,20 @@ go/global/general versioning system
 
 > go get github.com/peterducai/gvs
 
+
+# parameters
+
+Binary: /usr/sbin/gvs → gvs_exec_t   (go build -o /path/binary-name)
+Configuration directory: /etc/gvs.conf → gvs_config_t
+Logfile directory: /var/log/gvs → gvs_log_t
+Content directory: <any> → gvs_sys_content_t
+Startup script: /usr/lib/systemd/system/gvs.service → gvs_unit_file_d
+Process: /usr/sbin/gvs -DFOREGROUND → gvs_t
+Ports: 80/tcp, 443/tcp → gvs_t, http_port_t
+
+
+
+
 ## Main features
 
 * dead simple & single binary
@@ -26,6 +40,9 @@ go/global/general versioning system
 * Archive and send a collection of changesets as a series of patch by emails
 * diff lines OR functions. 
 * data diffing for YAML, JSON, INI
+
+
+
 <!-- use/investigate https://github.com/Microsoft/language-server-protocol to specify languages
 or https://github.com/AnanthaRajuCprojects/Reserved-Key-Words-list-of-various-programming-languages 
 
@@ -42,7 +59,7 @@ JAVA:
   STRING(?) STRING( STRING? ) {  -->
 
 
-## Examples
+<!-- ## Examples  TODO: make better workflow examples
 
 ### Simple workflow (single person)
 
@@ -159,4 +176,4 @@ what is different from GIT:
 * Inconsistent command line interface
 * Revert features with ease 
 
--->
+--> -->
