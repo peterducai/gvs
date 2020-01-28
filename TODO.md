@@ -9,3 +9,7 @@ see https://en.wikipedia.org/wiki/VCDIFF
 data diffing for YAML, JSON, INI
 
 https://en.wikipedia.org/wiki/INI_file
+
+implement 
+
+> git bundle create your_name.bundle --all
