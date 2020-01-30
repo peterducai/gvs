@@ -34,4 +34,7 @@ Ports: 443/tcp → gvs_t, http_port_t
 * automatic metrics (TODOs, line count, functions added/removed, etc..)
 * write or hide on commit, do not delete!
 * diff lines or characters
+* Moved code detection. Find refactored code -- renamed, moved, reordered, wrapped, lifted, combined or fragmented code.
 * replication and backup
+
+<!-- Language-aware. ydiff parses programs, understands basic language constructs and will not make non-sensical comparisons. For example it will not compare a string "10000" with an integer 10000 even though they look very similar. Also, it tries to match functions with the same name before it attempts to destruct and compare functions of different names. -->
