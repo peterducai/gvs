@@ -7,6 +7,17 @@ go/global/general versioning system
 > go get github.com/peterducai/gvs
 
 
+# Certs
+
+generate new certs
+
+> openssl genrsa -out server.key 4096
+
+> openssl ecparam -genkey -name secp384r1 -out server.key
+
+> openssl req -new -x509 -sha256 -key server.key -out server.crt -days 3650
+
+
 # SELINUX parameters
 
 ```

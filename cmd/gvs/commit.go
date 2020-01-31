@@ -14,8 +14,8 @@ type Ref struct {
 
 //Commit represents whole config file
 type Commit struct {
-	name        string `json:"name"`
-	description string `json:"description"`
+	Name        string `json:"name"`
+	Description string `json:"description"`
 	Date        string `json:"date"`
 	Author      User
 	Reference   []Ref

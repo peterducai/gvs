@@ -5,8 +5,10 @@ import (
 	"fmt"
 )
 
+//DocumentType type of doc
 type DocumentType int
 
+//GenericDoc ia any doc
 const (
 	GenericDoc DocumentType = iota
 	Incident
@@ -24,11 +26,11 @@ func (dt DocumentType) String() string {
 	return [...]string{"GenericDoc", "Incident", "Change", "Problem"}[dt]
 }
 
-//xSSHkey defines ssh key and it's extra properties
+//Document defines ssh key and it's extra properties
 type Document struct {
-	Id string `json:"id"`
-	Path  string `json:"path"`
-	Public  bool   `json:"public"`
+	ID     string `json:"id"`
+	Path   string `json:"path"`
+	Public bool   `json:"public"`
 }
 
 //xCreateCommitJSON dump values to config file
