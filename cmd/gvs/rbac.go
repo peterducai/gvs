@@ -12,6 +12,7 @@ type User struct {
 	User    string `json:"user"`
 	Email   string `json:"email"`
 	SSHkeys []SSHkey
+	Role    string `json:"role"`
 }
 
 //Perm is permission for role/user

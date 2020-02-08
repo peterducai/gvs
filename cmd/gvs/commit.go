@@ -5,11 +5,13 @@ import (
 	"fmt"
 )
 
-//Ref defines ssh key and it's extra properties
-type Ref struct {
-	ID    string `json:"id"`
-	Link  string `json:"link"`
-	Other bool   `json:"other"`
+//Change defines ssh key and it's extra properties
+type Change struct {
+	ID            string `json:"id"`
+	FilePath      string `json:"filepath"`
+	DiffPath      bool   `json:"diffpath"`
+	PatchPath     bool   `json:"patchpath"`
+	SelinuxChange string `json:"selinuxchange"` //unconfined_u:object_r:user_home_t:s0
 }
 
 //Commit represents whole config file
@@ -18,7 +20,7 @@ type Commit struct {
 	Description string `json:"description"`
 	Date        string `json:"date"`
 	Author      User
-	Reference   []Ref
+	Changes     []Change
 }
 
 //CreateCommitJSON dump values to config file

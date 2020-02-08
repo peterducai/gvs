@@ -17,6 +17,31 @@ implement
 
 
 
+cat /etc/selinux/targeted/setrans.conf 
+#
+# Multi-Category Security translation table for SELinux
+# 
+# Uncomment the following to disable translation libary
+# disable=1
+#
+# Objects can be categorized with 0-1023 categories defined by the admin.
+# Objects can be in more than one category at a time.
+# Categories are stored in the system as c0-c1023.  Users can use this
+# table to translate the categories into a more meaningful output.
+# Examples:
+# s0:c0=CompanyConfidential
+# s0:c1=PatientRecord
+# s0:c2=Unclassified
+# s0:c3=TopSecret
+# s0:c1,c3=CompanyConfidentialRedHat
+s0=SystemLow
+s0-s0:c0.c1023=SystemLow-SystemHigh
+s0:c0.c1023=SystemHigh
+
+
+see selinux/mcstrans/share/examples/nato/
+
+
 
 <!-- * **strict RBAC** (requires all access through roles, and permissions are connected only to roles, not directly to users.)
 * integrated **tickets** and **wiki/docs**

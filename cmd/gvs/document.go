@@ -8,12 +8,9 @@ import (
 //DocumentType type of doc
 type DocumentType int
 
-//GenericDoc ia any doc
+//GenericDoc ia any doc  TODO: rewrite
 const (
 	GenericDoc DocumentType = iota
-	Incident
-	Change
-	Problem
 	Bug
 	MeetingNote
 	ProjectPlan
@@ -28,14 +25,16 @@ func (dt DocumentType) String() string {
 
 //Document defines ssh key and it's extra properties
 type Document struct {
-	ID     string `json:"id"`
-	Path   string `json:"path"`
-	Public bool   `json:"public"`
+	ID           string       `json:"id"`
+	Path         string       `json:"path"`
+	Permissions  bool         `json:"permissions"`
+	Encrypted    bool         `json:"encrypted"`
+	DocumentType DocumentType `json:"documenttype"`
 }
 
-//xCreateCommitJSON dump values to config file
-func xCreateCommitJSON(conf GVSconfig) {
-	b, err := json.Marshal(conf)
+//CreateDocument dump values to config file
+func CreateDocument(doc Document) {
+	b, err := json.Marshal(doc)
 	if err != nil {
 		fmt.Println(err)
 		return
