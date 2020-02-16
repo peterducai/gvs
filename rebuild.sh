@@ -1,4 +1,4 @@
 #!/bin/bash
 
-go build
+go build gvs.go
 go install

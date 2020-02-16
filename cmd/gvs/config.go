@@ -3,8 +3,20 @@ package gvs
 import (
 	"encoding/json"
 	"fmt"
+	"log"
 	"os"
 )
+
+//GVSconfig represents whole config file
+type GVSconfig struct {
+	Roles []Role
+}
+
+func check(e error) {
+	if e != nil {
+		panic(e)
+	}
+}
 
 //ReadConfig reads gvs.config
 func ReadConfig() {
@@ -22,14 +34,18 @@ func CreateConfig(conf GVSconfig) {
 }
 
 //CreateDefaultConfig dump values to config file
-func CreateDefaultConfig() {
+func CreateDefaultConfig(path string) {
 	config := new(GVSconfig)
 	b, err := json.Marshal(config)
 	if err != nil {
-		fmt.Println(err)
-		return
+		log.Println(err)
 	}
-	fmt.Println(string(b))
+	f, err := os.Create(path)
+	if err != nil {
+		log.Println(err)
+	}
+	defer f.Close()
+	f.Write(b)
 }
 
 // fileExists checks if a file exists and is not a directory before we
@@ -37,7 +53,7 @@ func CreateDefaultConfig() {
 func fileExists(filename string) bool {
 	info, err := os.Stat(filename)
 	if os.IsNotExist(err) {
-		fmt.Println("File doesn't exist")
+		//fmt.Println("File doesn't exist")
 		return false
 	}
 	return !info.IsDir()
@@ -45,8 +61,12 @@ func fileExists(filename string) bool {
 
 //ConfigHealthCheck checks for healthy config file
 func ConfigHealthCheck() {
-	fmt.Println("running CONFIG checks")
-	fileExists("~/.gvsconfig.json")
+	usrdir, err := os.UserHomeDir()
+	check(err)
+	usrdir = usrdir + "/.gvsconfig.json"
+	if !fileExists(usrdir) {
+		CreateDefaultConfig(usrdir)
+	}
 }
 
 //getFilePerm will get file permissions

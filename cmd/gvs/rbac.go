@@ -24,11 +24,6 @@ type Role struct {
 	Permissions []Perm
 }
 
-//GVSconfig represents whole config file
-type GVSconfig struct {
-	Roles []Role
-}
-
 func createRole() {
 
 }
