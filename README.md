@@ -7,7 +7,7 @@ go/global/general versioning system
 > go get github.com/peterducai/gvs
 
 
-# SELINUX parameters
+<!-- # SELINUX parameters
 
 ```
 Binary: /usr/sbin/gvs → gvs_exec_t   (go build -o /usr/sbin/gvs)
@@ -17,7 +17,7 @@ Content directory: <any> → gvs_sys_content_t
 Startup script: /usr/lib/systemd/system/gvs.service → gvs_unit_file_d
 Process: /usr/sbin/gvs -DFOREGROUND → gvs_t
 Ports: 443/tcp → gvs_t, http_port_t
-```
+``` -->
 
 
 ## Main features
