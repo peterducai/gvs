@@ -35,3 +35,5 @@ Ports: 443/tcp → gvs_t, http_port_t
 * write or hide on commit, do not delete!
 * diff lines or characters
 * replication and backup
+
+[FOSSA](https://app.fossa.com/projects/git%2Bgithub.com%2Fpeterducai%2Fgvs?utm_source=share_link)
