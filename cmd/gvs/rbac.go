@@ -17,6 +17,9 @@ type User struct {
 
 //Perm is permission for role/user
 type Perm struct {
+	CanRead    bool
+	CanWrite   bool
+	CanComment bool
 }
 
 //Role to which user can be bind
