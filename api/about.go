@@ -4,12 +4,12 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/peterducai/jobdsigner/models"
+	"github.com/peterducai/gvs/models"
 )
 
 //About adds job to pipeline
 func About(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Add("Strict-Transport-Security", "max-age=63072000; includeSubDomains")
-	fmt.Fprintf(w, "about  %d.%d.%d %s\n", models.JVersion.MAJOR, models.JVersion.MINOR, models.JVersion.PATCH, models.JVersion.HASH)
+	fmt.Fprintf(w, "about  %d.%d.%d %s\n", models.GvsVersion.MAJOR, models.GvsVersion.MINOR, models.GvsVersion.PATCH, models.GvsVersion.HASH)
 }

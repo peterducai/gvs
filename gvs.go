@@ -7,8 +7,8 @@ import (
 	"net/http"
 	"time"
 
+	"github.com/peterducai/gvs/api"
 	"github.com/peterducai/gvs/models"
-	"github.com/peterducai/jobdsigner/api"
 )
 
 func main() {
@@ -16,10 +16,8 @@ func main() {
 	models.GvsVersion.MAJOR = 0
 	models.GvsVersion.MINOR = 0
 	models.GvsVersion.PATCH = 1
-	models.GvsVersion.HASH = "a12c1"
+	models.GvsVersion.HASH = "b22"
 	models.GvsVersion.Startime = time.Now().Format(time.RFC850)
-
-	//models.PipelinePool = append(new(models.Pipeline{}))
 
 	fmt.Printf("GVS %d.%d.%d %s\n", models.GvsVersion.MAJOR, models.GvsVersion.MINOR, models.GvsVersion.PATCH, models.GvsVersion.HASH)
 
@@ -27,7 +25,6 @@ func main() {
 
 	//HANDLERS
 	mux.HandleFunc("/", api.Main)
-	mux.HandleFunc("/job/add", api.JobAdd)
 	mux.HandleFunc("/about", api.About)
 
 	cfg := &tls.Config{
