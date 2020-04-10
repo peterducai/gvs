@@ -7,21 +7,21 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/peterducai/gvs/api"
 	"github.com/peterducai/gvs/models"
+	"github.com/peterducai/jobdsigner/api"
 )
 
 func main() {
 
-	models.JVersion.MAJOR = 0
-	models.JVersion.MINOR = 0
-	models.JVersion.PATCH = 1
-	models.JVersion.HASH = "a12b"
-	models.JVersion.Startime = time.Now().Format(time.RFC850)
+	models.GvsVersion.MAJOR = 0
+	models.GvsVersion.MINOR = 0
+	models.GvsVersion.PATCH = 1
+	models.GvsVersion.HASH = "a12c1"
+	models.GvsVersion.Startime = time.Now().Format(time.RFC850)
 
 	//models.PipelinePool = append(new(models.Pipeline{}))
 
-	fmt.Printf("Job dSigner %d.%d.%d %s\n", models.JVersion.MAJOR, models.JVersion.MINOR, models.JVersion.PATCH, models.JVersion.HASH)
+	fmt.Printf("GVS %d.%d.%d %s\n", models.GvsVersion.MAJOR, models.GvsVersion.MINOR, models.GvsVersion.PATCH, models.GvsVersion.HASH)
 
 	mux := http.NewServeMux()
 

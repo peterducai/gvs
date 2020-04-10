@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-s//Change defines ssh key and it's extra properties
+//Change defines ssh key and it's extra properties
 type Change struct {
 	ID            string `json:"id"`
 	FilePath      string `json:"filepath"`
