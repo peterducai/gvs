@@ -1,4 +1,4 @@
-package gvs
+package models
 
 //SSHkey defines ssh key and it's extra properties
 type SSHkey struct {

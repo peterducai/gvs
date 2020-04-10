@@ -5,6 +5,8 @@
 *.so
 *.dylib
 
+gvs
+
 # Test binary, build with `go test -c`
 *.test
 
@@ -14,3 +16,5 @@
 # Jetbrains
 .idea/
 
+tls.key
+tls.crt

@@ -1,4 +1,4 @@
-package gvs
+package models
 
 import (
 	"encoding/json"

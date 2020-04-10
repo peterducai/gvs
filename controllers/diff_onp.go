@@ -1,7 +1,7 @@
 // The algorithm implemented here is based on "An O(NP) Sequence Comparison Algorithm"
 // by described by Sun Wu, Udi Manber and Gene Myers
 
-package gvs
+package controllers
 
 import (
 	"bytes"

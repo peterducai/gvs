@@ -1,4 +1,4 @@
-package gvs
+package services
 
 import (
 	"os"
@@ -8,12 +8,12 @@ import (
 //Item in watchlist
 type Item struct {
 	path          string
-	last_seen     string //TODO: figure type
+	lastseen      string //TODO: figure type
 	sleepseconds  int
 	sleeptreshold int
 }
 
-//Watchlist
+//Watchlist list of paths to watch
 type Watchlist struct {
 	Items []Item
 }
